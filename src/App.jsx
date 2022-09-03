@@ -7,13 +7,15 @@ import ThemeProvider, { ThemeContext } from "./providers/ThemeProvider";
 
 // No need to change *return* part in both StyleTag and App components
 // You have to set themeMode based on context
-const StyleTag = () => {
-  const themeMode = THEME_TYPE.LIGHT;
-
-  return <style>{Styles(themeMode)}</style>;
-};
 
 function App() {
+  const themeMode = useContext(ThemeContext);
+
+  const StyleTag = () => {
+    const themeMode = THEME_TYPE.LIGHT;
+
+    return <style>{Styles(themeMode)}</style>;
+  };
   return (
     <ThemeProvider>
       <StyleTag />
