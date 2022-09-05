@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext,useState } from "react";
 import NameBox from "./components/NameBox";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import { THEME_TYPE } from "./constants";
@@ -10,6 +10,8 @@ import ThemeProvider, { ThemeContext } from "./providers/ThemeProvider";
 
 function App() {
   const themeMode = useContext(ThemeContext);
+  const [first, setfirst] = useState(themeMode)
+  console.log(first);
 
   const StyleTag = () => {
     const themeMode = THEME_TYPE.LIGHT;

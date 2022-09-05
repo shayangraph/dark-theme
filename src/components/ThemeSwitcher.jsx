@@ -7,9 +7,7 @@ const ThemeSwitcher = () => {
   // You have to set themeMode based on context
   const { themeMode, setThemeMode } = useContext(ThemeContext);
 
-  const handleThemeChange = (e) => {
-    setThemeMode(e.currentTarget.value);
-  };
+  const handleThemeChange = (e) => {};
 
   return (
     <div className="switch-container">

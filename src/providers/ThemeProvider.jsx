@@ -6,6 +6,7 @@ export const ThemeContext = createContext();
 const ThemeProvider = ({ children }) => {
   const [themeMode, setThemeMode] = useState(THEME_TYPE.LIGHT);
   
+  
 
   return (
     <ThemeContext.Provider value={{setThemeMode,themeMode}}>
