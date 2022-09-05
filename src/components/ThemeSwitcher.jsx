@@ -3,11 +3,10 @@ import { THEME_TYPE } from "../constants";
 import { ThemeContext } from "../providers/ThemeProvider";
 
 const ThemeSwitcher = () => {
-  // No need to change *return* part
-  // You have to set themeMode based on context
-  const { themeMode, setThemeMode } = useContext(ThemeContext);
-
-  const handleThemeChange = (e) => {};
+  const { themeMode, toggle } = useContext(ThemeContext);
+  const handleThemeChange = (e) => {
+    toggle(e.target.value);
+  };
 
   return (
     <div className="switch-container">
